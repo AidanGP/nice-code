@@ -5,7 +5,7 @@ function import_code() {
 function export_code() {
     //Export user code
 
-    let user_code = document.getElementById('code_editor').value;
+    let user_code = document.getElementById('editor').innerText;
     $.ajax({
         url: "http://localhost:5000/export/",
         type: "POST",

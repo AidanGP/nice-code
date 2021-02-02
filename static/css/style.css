@@ -21,14 +21,41 @@ body {
   color: var(--accent);
 }
 
-#code_editor {
-  resize: none;
-  margin: 50px;
-}
-
 #code_area {
   background-color: #e5e5e5;
-  margin: 100px;
+  width: 65%;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 4px;
+}
+.input,
+.textarea {
+  font-family:monospace;
+  text-align: left;
+  padding: 15px 15px;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: none;
+  min-height: 60px;
+  line-height: 30px;
+}
+
+.textarea[contenteditable]:empty::before {
+  content: "Copy in some code: ";
+  color: gray;
+}
+
+
+.border {
+  border: 10px dashed yellowgreen;
+  width: 100%;
 }
 
 ul {
@@ -58,3 +85,4 @@ li a:hover:not(.active) {
   background-color: #e5e5e5;
   opacity: 0.4;
 }
+

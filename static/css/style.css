@@ -4,65 +4,14 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  text-align: center;
   font-family: "Staatliches", sans-serif;
-  overflow: hidden;
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-  user-select: none;
   background-color: #000;
-}
-
-#heading {
-  color: var(--accent);
-}
-
-#code_area {
-  background-color: #e5e5e5;
-  width: 65%;
-  margin: auto;
-  margin-top: 50px;
-  border-radius: 4px;
-}
-.input,
-.textarea {
-  font-family:monospace;
-  text-align: left;
-  padding: 15px 15px;
-  outline: none;
-  resize: none;
-  box-sizing: border-box;
-}
-
-.textarea {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  resize: none;
-  min-height: 60px;
-  line-height: 30px;
-}
-
-.textarea[contenteditable]:empty::before {
-  content: "Copy in some code: ";
-  color: gray;
-}
-
-
-.border {
-  border: 10px dashed yellowgreen;
-  width: 100%;
 }
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 
 }
 
@@ -86,3 +35,16 @@ li a:hover:not(.active) {
   opacity: 0.4;
 }
 
+#header {
+  color: var(--accent);
+  text-align: center;
+}
+#menu {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto;
+}

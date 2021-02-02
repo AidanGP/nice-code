@@ -2,37 +2,47 @@
 <html>
   <head>
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/codemirror.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'codemirror/lib/codemirror.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'codemirror/theme/material-darker.css') }}">
+
+    
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"/>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type=text/javascript src="{{url_for('static', filename='js/codemirror.js') }}"></script>
+    
+    
+    
+    <script src="{{url_for('static', filename='codemirror/lib/codemirror.js') }}"></script>
+    <script src="{{url_for('static', filename='codemirror/mode/python/python.js') }}"></script>
     <title>Nice Code</title>
   </head>
 
   <body>
-    <h1 id="heading">< nice code ></h1> 
-    
-    <ul>
-        <li><a href="javascript:import_code()">Import</a></li>
-        <li><a href="javascript:export_code()">Export</a></li>
-    </ul>
-    <div id="border">
-    <div id='code_area'>
-      <span class="textarea" role="textbox" spellcheck="false" id="editor" contenteditable></span></p>
-    </div>
+
+    <div id="header">
+      <h1 id="heading">< nice code ></h1> 
     </div>
 
+    <div id="menu">
+      <ul>
+        <li><a href="">Import</a></li>
+        <li><a href="">Export</a></li>
+    </ul>
+    </div>
+    <style>
+      .CodeMirror {
+        border: 1px solid #eee;
+        height: auto;
+      }
+    </style>
     
-    
-    <script type=text/javascript>
-      $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
-      var myCodeMirror = CodeMirror(document.body, {
-        value: "function myScript(){return 100;}\n",
-        mode:  "javascript"
+
+    <form><textarea id="code" name="code"></textarea></form>
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        viewportMargin: Infinity
       });
     </script>
-    <script type=text/javascript src="{{url_for('static', filename='js/main.js') }}"></script>
-    
+   
   </body>
 </html>

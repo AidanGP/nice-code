@@ -1,5 +1,4 @@
-//<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+// Initialise the CodeMirror editor
 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
     viewportMargin: Infinity,
     theme: "material-darker",
@@ -7,7 +6,10 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
     lineWrapping: true
   });
 
-function export_code() { 
+
+
+function export_code() {
+    // OnClick function for downloading the submitted code.
     let div = document.getElementById('container');
     html2canvas(div, {
         backgroundColor: null

@@ -1,11 +1,14 @@
 :root {
-  --accent: #1ed760;
+  /*--accent: #1ed760;*/
+  --accent: #77B28C;
 }
 
 html,
 body {
   font-family: "Staatliches", sans-serif;
-  background-color: #000;
+  background-color: #C2C5BB;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -31,7 +34,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #e5e5e5;
+  background-color: #B4654A;
   opacity: 0.4;
 }
 
@@ -43,8 +46,12 @@ li a:hover:not(.active) {
   text-align: center;
   margin-bottom: 25px;
 }
-
-.CodeMirror {
-  border: 1px solid #eee;
-  height: auto;
+#container {
+  border: none;
+  max-width: 50%;
+  width: fit-content;
+  margin: auto;
+  padding: 30px;
+  border-radius: 4px;
+  background-color: #77B28C;
 }

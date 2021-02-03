@@ -13,6 +13,11 @@
     
     <script src="{{url_for('static', filename='codemirror/lib/codemirror.js') }}"></script>
     <script src="{{url_for('static', filename='codemirror/mode/python/python.js') }}"></script>
+    
+    <script src= 
+    "https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"> 
+    </script> 
+    
     <title>Nice Code</title>
   </head>
 
@@ -24,25 +29,26 @@
 
     <div id="menu">
       <ul>
-        <li><a href="">Import</a></li>
-        <li><a href="">Export</a></li>
+        <li><a href="javascript:import_code()">Import</a></li>
+        <li><a href="javascript:export_code()">Export</a></li>
     </ul>
     </div>
     <style>
       .CodeMirror {
-        border: 1px solid #eee;
         height: auto;
+        border-radius: 4px;
+        width: fit-content;
+        min-width: 6%;
+        max-width: 100%;
+        margin: auto;
+        padding: 25px;
       }
     </style>
     
-
-    <form><textarea id="code" name="code"></textarea></form>
-    <script>
-      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-        lineNumbers: true,
-        viewportMargin: Infinity
-      });
-    </script>
+    <div id="container">
+    <textarea id="code" name="code"></textarea>
+    </div>
+    <script src="{{url_for('static', filename='js/main.js') }}"></script>
    
   </body>
 </html>

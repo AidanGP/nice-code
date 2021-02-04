@@ -10,4 +10,4 @@ The main goal behind Nice Code was being able to present propperly formatted, ae
 
 ## Usage
 * Importing code is as easy as copy and pasting text in or dragging and dropping the desired file.
-* To download the image, simply press export.
+* To download the image, simply press export

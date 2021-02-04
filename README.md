@@ -5,7 +5,9 @@ The main goal behind Nice Code was being able to present propperly formatted, ae
 
 ## Features
 **Save Quickly** ~ Save your code snippets at the press of a button.
+
 **Multi-Language Support** ~ Enjoy good looking syntax highlighting for a multitude of languages.
+
 **Wide variety of themes** ~ Choose between heaps of syntax themes.
 
 ## Usage

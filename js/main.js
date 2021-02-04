@@ -8,7 +8,8 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 });
 
 var lang = document.getElementById("language");
-var mode = ["xml","javascript","css","htmlmixed","python"];
+var mode = ["javascript","css","htmlmixed","python", "go", "haskell",
+            "php", "ruby", "sql"];
 
 for (var i = 0; i < mode.length; i ++) {
     var item = mode[i];
@@ -19,9 +20,10 @@ for (var i = 0; i < mode.length; i ++) {
 }
 
 var theme = document.getElementById("theme");
-var themes = ["3024-day", "3024-night", "ambiance", "base16-dark", "base16-light", "blackboard",
-          "cobalt", "eclipse", "elegant", "erlang-dark", "lesser-dark", "midnight", "monokai",
-          "neat"];
+var themes = ["3024-night", "base16-dark", "blackboard",
+          "cobalt", "midnight", "monokai","darcula", "isotope", 
+          "material-darker", "night",
+          "twilight"];
 
 for (var i = 0; i < themes.length; i ++) {
     var item = themes[i];
@@ -34,13 +36,11 @@ for (var i = 0; i < themes.length; i ++) {
 function changeMode(obj) {
     var val = obj.value;
     editor.setOption("mode", val);
-    console.log(val);
 }
 
 function changeTheme(obj) {
     var val = obj.value;
     editor.setOption("theme", val);
-    console.log(val);
 }
 
 function import_code() {

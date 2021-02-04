@@ -1,14 +1,15 @@
 :root {
-  /*--accent: #1ed760;*/
-  --accent: #77B28C;
+  --bg: #F7A399;
+  --font: #EF6351;
 }
 
 html,
 body {
   font-family: "Staatliches", sans-serif;
-  background-color: #C2C5BB;
+  background-color: var(--bg);
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 ul {
@@ -24,28 +25,35 @@ li {
 
 li a,select {
   display: block;
-  color: var(--accent);
+  color: var(--font);
   text-align: center;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--font);
   padding: 10px 12px;
   text-decoration: none;
   border-radius: 3px;
   margin: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: lowercase;
+  font-size: 16px;
 }
 
-li a:hover:not(.active) {
-  background-color: #B4654A;
-  opacity: 0.4;
+select {
+  background-color: transparent;
+  outline: none;
+}
+
+li a:hover, select:hover{
+  opacity: 0.6;
 }
 
 #header {
-  color: var(--accent);
+  color: var(--font);
   text-align: center;
-  margin-top: 12%;
 }
-#menu {
+#menu, #menu2 {
   text-align: center;
   margin-bottom: 25px;
+  margin-top: 25px;
 }
 #container {
   border: none;
@@ -54,5 +62,5 @@ li a:hover:not(.active) {
   margin: auto;
   padding: 30px;
   border-radius: 4px;
-  background-color: #77B28C;
+  background-color: var(--font);
 }

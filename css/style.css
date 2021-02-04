@@ -16,14 +16,14 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-
 }
 
 li {
   display: inline-block;
 }
 
-li a,select {
+li a,
+select {
   display: block;
   color: var(--font);
   text-align: center;
@@ -42,7 +42,8 @@ select {
   outline: none;
 }
 
-li a:hover, select:hover{
+li a:hover,
+select:hover {
   opacity: 0.6;
 }
 
@@ -50,11 +51,14 @@ li a:hover, select:hover{
   color: var(--font);
   text-align: center;
 }
-#menu, #menu2 {
+
+#menu,
+#menu2 {
   text-align: center;
   margin-bottom: 25px;
   margin-top: 25px;
 }
+
 #container {
   border: none;
   max-width: 50%;

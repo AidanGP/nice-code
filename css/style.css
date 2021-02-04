@@ -22,7 +22,7 @@ li {
   display: inline-block;
 }
 
-li a {
+li a,select {
   display: block;
   color: var(--accent);
   text-align: center;

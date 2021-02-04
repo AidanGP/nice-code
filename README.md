@@ -1,5 +1,5 @@
 # Nice Code
-
+![Nice Code](examples/nice-code.png?raw=true "Nice Code Example")
 ## Why
 The main goal behind Nice Code was being able to present propperly formatted, aesthetic code. That's it.
 

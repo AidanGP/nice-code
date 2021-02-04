@@ -37,19 +37,30 @@ for (let j = 0; j < THEME_LIST.length; j++) {
 // changeMode function called when the use changes the mode
 function changeMode(dropdown_option) {
     let mode_name = dropdown_option.value;
-    editor.setOption('mode', mode_name);
+    EDITOR.setOption('mode', mode_name);
 }
 
 // changeTheme function called when the user changes the theme
 function changeTheme(dropdown_option) {
     let theme_name = dropdown_option.value;
-    editor.setOption('theme', theme_name);
+    EDITOR.setOption('theme', theme_name);
 }
 
+const SITE_THEMES = [["#D0DB97","#69B578"],
+                    ["#D6D5C9","#0A100D"],
+                    ["#C8D96F","#A5B452"],
+                    ["#F8FFE5","#3083DC"],
+                    ["#A9FDAC","#44CF6C"]];
+
+const SITE_THEME = SITE_THEMES[Math.floor(Math.random() * SITE_THEMES.length)];
+const ROOT = document.documentElement;
+ROOT.style.setProperty('--bg', SITE_THEME[0]);
+ROOT.style.setProperty('--font', SITE_THEME[1]);
+
 // Initialise the CodeMirror editor
-let editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+const EDITOR = CodeMirror.fromTextArea(document.getElementById('code'), {
     viewportMargin: Infinity,
-    theme: 'monokai',
+    theme: 'material-darker',
     mode: 'javascript',
     lineWrapping: true,
     autofocus: true

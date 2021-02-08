@@ -5,8 +5,7 @@ const MODE_SELECTOR = document.getElementById('mode');
 const THEME_SELECTOR = document.getElementById('theme');
 
 // List of available modes (languagues)
-const MODE_LIST = ['python','javascript', 'css', 'htmlmixed', 'go', 'haskell',
-    'php', 'ruby', 'sql', 'clike'
+const MODE_LIST = ['python','javascript', 'css', 'htmlmixed', 'go', 'haskell', 'ruby', 'clike'
 ];
 
 // List of available themes
